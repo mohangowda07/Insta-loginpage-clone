@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .second{
+        position: absolute;
+        left:500px;
+        top:2rem;
+    }
+    nav{
+        display: flex;
+        /* width: 1000px; */
+    }
+    #i1{
+        position: relative;
+        left: 55px;
+        top: -30px;
+    }
+    #i2{
+        position: relative;
+        left: -350px;
+        top: -31px;
+       
+    }
+    #frame1{
+        height: 600px;
+        mix-blend-mode: color-burn;
+        position: relative;
+        left: 330px;
+    }
+    #frame2{
+        height: 600px;
+        position: relative;
+        left: -70px;
+        /* z-index: 0; */
+        animation-name: change;
+        animation-iteration-count: infinite;
+        animation-duration: 24s;
+        z-index: 0;
+     background-repeat: no-repeat;
+     background-position: 0%,30%;
+     background-position: 1.4rem;
+
+      
+     
+    }
+    .slide{
+        animation: change 8s infinite;
+    }
+    @keyframes change {
+        0%{
+            background-image: url(./screenshot2.png);
+            
+        }
+        25%{
+            background-image: url(./screenshot4.png);
+        }
+        50%{
+            background-image: url(./screenshot3.png);
+        }
+        75%{
+            background-image: url(./screenshot1.png);
+        }
+    }
+</style>
+<body>
+    <nav>
+    <div>
+        <img src="iphoneframe.png" alt="" id="frame1">
+        <img src="screenshot3.png" alt="" id="i1">
+    </div>
+    <div class="second">
+        <img src="iphoneframe.png" alt="" id="frame2"  >
+        <img src="screenshot1.png" alt="" id="i2" class="slide">
+    </div>
+</nav>
+</body>
+</html>
